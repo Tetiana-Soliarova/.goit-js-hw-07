@@ -16,19 +16,22 @@ const images = [
     },
 ];
 
-/*const galleryEl = document.querySelector('#gallery');
+
+const galleryEl = document.querySelector('#gallery');
 galleryEl.classList.add('galery');
 
-console.log(galleryEl);*/
+console.log(galleryEl);
 
-for (let el of images) {
-    document.querySelector('#gallery')
-    
-        .insertAdjacentHTML('beforeEnd', `<li class="galery"> <img class="galery-img" src = "${el.url}" alt = "${el.alt}"></img> </li>`);
-    
-} 
+const galleryImages = option => {
+    const { url, alt } = option;
+    return `<li class="galery"> <img class="galery-img" src = "${url}" alt = "${alt}"></img> </li>`;
+};
 
 
+
+const mmakeGalleryImage = images.map(galleryImages).join('');
+
+galleryEl.insertAdjacentHTML('beforeEnd', mmakeGalleryImage);
 
 
 /*Напиши скрипт для создания галлереи изображений по массиву данных.

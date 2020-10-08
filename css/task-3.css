@@ -1,6 +1,7 @@
 .galery{
     display: flex;
     margin-bottom: 15px;
+    margin-right: 15px;
 }
 .galery-img{
     width: 200px;

@@ -1,8 +1,8 @@
 //1//
 const cartegoryEl = document.querySelector('#categories');
-console.log(cartegoryEl);//not
+//console.log(cartegoryEl);//not
 
-const ulCartegoryEl = Array.from(cartegoryEl.querySelectorAll('#categories .item'));
+const ulCartegoryEl = (cartegoryEl.querySelectorAll('#categories .item'));
 console.log(`В списке ${ulCartegoryEl.length} категории`); //В списке 3 категории
 
 
@@ -13,25 +13,29 @@ const nameEl = document.querySelector('#categories h2');
 
 
 
-const categoriesLi = Array.from(
-    document.querySelectorAll("#categories > li")
-);
+const categoriesLi = 
+    document.querySelectorAll("#categories > li");
 //console.log(categoriesLi); //[li.item, li.item, li.item]
 
-const sumEl = Array.from(document.querySelectorAll('#categories li ul'));
+const sumEl = document.querySelectorAll('#categories li ul');
 //console.log(`Количество элементов: ${sumEl.length}`);//Количество элементов: 12
 //console.log(sumEl);// [ul, ul, ul]
 
 
-const resultt = [];
+
 categoriesLi.forEach(element => {
-    resultt.push(
+    console.log(
         `Категория: ${element.firstElementChild .textContent.trim()}/Количество: ${element.lastElementChild.children.length
             }`
     );
 });
 
-console.log(resultt);
+
+
+
+
+
+
 
 console.log(' ');
 
